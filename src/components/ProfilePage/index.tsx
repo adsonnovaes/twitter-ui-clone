@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { 
+import {
   Container,
   Banner,
   Avatar,
@@ -9,13 +9,15 @@ import {
   CakeIcon,
   Followage,
   EditButt
- } from './styles'; 
+} from './styles';
+
+import Feed from '../Feed';
 
 const ProfilePage: React.FC = () => {
   return (
     <Container>
       <Banner>
-        <Avatar/>
+        <Avatar />
       </Banner>
 
       <ProfileData>
@@ -23,7 +25,7 @@ const ProfilePage: React.FC = () => {
 
         <h1>Adson Novaes</h1>
         <h2>@novaesadson</h2>
- 
+
         <p>
           Developer FullStack <a href="https://github.com/adsonnovaes" >@adsonnovaes</a>
         </p>
@@ -49,6 +51,8 @@ const ProfilePage: React.FC = () => {
         </Followage>
 
       </ProfileData>
+
+      <Feed />
 
     </Container>
   );
