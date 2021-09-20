@@ -1,6 +1,9 @@
 import React from 'react';
-import FollowSuggestion from '../FollowSuggestion';
+import StickyBox from 'react-sticky-box';
+
 import List from '../List';
+import News from '../News';
+import FollowSuggestion from '../FollowSuggestion';
 
 import {
   Container,
@@ -18,34 +21,58 @@ const SideBar: React.FC = () => {
         <SearchIcon />
       </SearchWrapper>
 
-      <Body>
-        <List
-          title="Talvez você curta"
-          elements={[
-            <FollowSuggestion
-              name="Luiz Batanero"
-              nickname="@luizbatanero"
-            />,
-            <FollowSuggestion 
-              name="Luke Morales" 
-              nickname="@lukemorales" 
-            />,
-            <FollowSuggestion
-              name="Camila Magalhães"
-              nickname="@camilaamgl"
-            />,
-          ]}
-        />
+      <StickyBox>
+        <Body>
+          <List
+            title="Talvez você curta"
+            elements={[
+              <FollowSuggestion
+                name="Luiz Batanero"
+                nickname="@luizbatanero"
+              />,
+              <FollowSuggestion
+                name="Luke Morales"
+                nickname="@lukemorales"
+              />,
+              <FollowSuggestion
+                name="Camila Magalhães"
+                nickname="@camilaamgl"
+              />,
+            ]}
+          />
 
-        <List
-          title="Talvez você curta"
-          elements={[
-            <h1>Teste1</h1>,
-            <h1>Teste2</h1>,
-            <h1>Teste3</h1>,
-          ]}
-        />
-      </Body>
+          <List
+            title="Talvez você curta"
+            elements={[
+              <News />,
+              <News />,
+              <News />,
+              <News />,
+            ]}
+          />
+
+          <List
+            title="Talvez você curta"
+            elements={[
+              <News />,
+              <News />,
+              <News />,
+              <News />,
+            ]}
+          />
+
+          <List
+            title="Talvez você curta"
+            elements={[
+              <News />,
+              <News />,
+              <News />,
+              <News />,
+            ]}
+          />
+        </Body>
+      </StickyBox>
+
     </Container>
   );
 }
