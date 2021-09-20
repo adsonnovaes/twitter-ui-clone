@@ -21,7 +21,9 @@ const List: React.FC<Props> = ({
       </Item>
 
       {elements.map((element, index) => {
-        <Item key={index} > {element} </Item>
+        return (
+          <Item key={index} > {element} </Item>
+        )
       })}
     </Container>
   );
